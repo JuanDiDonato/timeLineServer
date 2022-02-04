@@ -24,6 +24,7 @@ urlpatterns = [
     path('logout/',LogoutAPIView.as_view(),name='logout'),
     path('camera/',include('apps.camera.routers')),
     path('storage/',include('apps.files.routers')),
+    path('posts/',include('apps.posts.routers')),
     path('register/',authentication_classes([])(permission_classes([AllowAny])(Register)).as_view(),name='register'),
 ]
 

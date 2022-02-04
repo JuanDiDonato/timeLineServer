@@ -36,7 +36,8 @@ BASE_APPS = [
 LOCAL_APPS = [
     'apps.camera.apps.CameraConfig',
     'apps.files.apps.FilesConfig',
-    'apps.users.apps.UsersConfig'
+    'apps.users.apps.UsersConfig',
+    'apps.posts.apps.postsConfig'
 ]
 
 THIRD_APPS = [
@@ -82,7 +83,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cameraserver.urls'
+ROOT_URLCONF = 'timeLineServer.urls'
 
 TEMPLATES = [
     {
@@ -100,7 +101,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cameraserver.wsgi.application'
+WSGI_APPLICATION = 'timeLineServer.wsgi.application'
 
 
 # Database
