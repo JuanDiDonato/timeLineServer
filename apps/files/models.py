@@ -1,7 +1,7 @@
 from django.db import models
 
 # user model
-from apps.users.models import User
+from apps.posts.models import Posts
 
 # model to upload files and videos
 
@@ -11,7 +11,7 @@ class Files(models.Model):
     id = models.AutoField(primary_key=True)
     date_of_file = models.DateField(auto_now_add=True)
     file = models.FileField(upload_to='files',null=True)
-    user = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    post = models.ForeignKey(Posts,on_delete=models.CASCADE,null=True)
 
     class Meta:
         verbose_name = 'File'

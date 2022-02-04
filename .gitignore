@@ -1,0 +1,13 @@
+# enviroments
+/server-enviroment
+.env
+
+# media
+/media
+/timeLineServer/media
+
+# cache
+__pycache__
+
+# database
+db.sqlite3

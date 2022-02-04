@@ -2,7 +2,7 @@
 from django.db import models
 
 # user model
-from apps.users.models import User
+from apps.posts.models import Posts
 
 # Camera model
 class Camera(models.Model):
@@ -11,7 +11,7 @@ class Camera(models.Model):
     id = models.AutoField(primary_key=True)
     date_of_picture = models.DateField(auto_now_add=True,blank=None,null=None)
     picture = models.ImageField(upload_to='pictures',null=False)
-    user = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    post = models.ForeignKey(Posts,on_delete=models.CASCADE,null=True)
 
     class Meta:
         verbose_name = 'Picture'
